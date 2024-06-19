@@ -243,7 +243,6 @@ footer,
               0 0 25px var(--btn-bg-color), 
               0 0 50px var(--btn-bg-color),
               0 0 80px var(--btn-bg-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-btn span {
