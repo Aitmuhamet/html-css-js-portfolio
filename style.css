@@ -372,6 +372,10 @@ article p,
 
 .wrapper img {
   border-radius: 1rem;
+  transition: box-shadow .2s;
+}
+.wrapper img:hover {
+  box-shadow: 5px 5px 15px var(--secondary-color);
 }
 
 article,
