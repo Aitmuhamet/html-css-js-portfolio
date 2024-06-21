@@ -7,6 +7,10 @@ const skillsBtn = document.getElementById("skills-btn");
 portfolioBtn.addEventListener("click", (event) => {
   skills.style.display = "none";
   portfolio.style.display = "flex";
+  setTimeout(() => {
+    portfolio.classList.add('visible');
+    skills.classList.remove('visible')
+  }, 200);
   skillsBtn.classList.remove("active-btn");
   portfolioBtn.classList.add("active-btn");
 });
@@ -14,6 +18,10 @@ portfolioBtn.addEventListener("click", (event) => {
 skillsBtn.addEventListener("click", (event) => {
   skills.style.display = "flex";
   portfolio.style.display = "none";
+  setTimeout(() => {
+    skills.classList.add('visible');
+    portfolio.classList.remove('visible');
+  }, 200);
   portfolioBtn.classList.remove("active-btn");
   skillsBtn.classList.add("active-btn");
 });

@@ -26,109 +26,126 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <section class="hero">
-      <img
-        id="toggleTheme"
-        class="theme-btn"
-        src="assets/theme_light.png"
-        alt="theme icon"
-      />
-      <div class="hero-pic">
-        <div class="inner-circle"></div>
-        <img src="assets/photo.webp" alt="Mason Wilkes" />
+
+    <section id="intro" class="section">
+      <div class="hero">
+        <img
+          id="toggleTheme"
+          class="theme-btn"
+          src="assets/theme_light.png"
+          alt="theme icon"
+        />
+        <div class="hero-pic">
+          <div class="inner-circle"></div>
+          <img src="assets/photo.webp" alt="Mason Wilkes" />
+        </div>
+        <div class="hero-info">
+          <h1>Aitmukhamet</h1>
+          <h2>Frontend Developer</h2>
+          <div class="logo-container">
+            <a href="https://github.com/Aitmuhamet"
+              ><img src="assets/github_light.png" alt="github logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/Aitmukhamet"
+              ><img src="assets/linkedin_light.png" alt="linkedin logo"
+            /></a>
+            <a href="mailto:xa210296@gmail.com"
+              ><img src="assets/email_light.png" alt="email logo"
+            /></a>
+          </div>
+        </div>
       </div>
-      <div class="hero-info">
-        <h1>Aitmukhamet</h1>
-        <h2>Frontend Developer</h2>
-        <div class="logo-container">
-          <a href="https://github.com/Aitmuhamet"
-            ><img src="assets/github_light.png" alt="github logo"
+      <div class="experience">
+        <h2><b>12+</b><br />Months<br />Frontend</h2>
+        <h2><b>4</b><br />Years<br />B.Sc.</h2>
+        <h2><b>15+</b><br />Academic<br />Projects</h2>
+      </div>
+      <div class="cta">
+        <a href="#second-screen">
+          <button class="btn download-btn">Portfolio</button>
+        </a>
+        <a href="https://t.me/Aitmukhamet96"
+          ><button class="btn contact-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Contact Me
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <section id="second-screen" class="section">
+      <div class="portfolio-skills">
+        <div class="btn-bg">
+          <button class="btn-2 active-btn" id="portfolio-btn">Portfolio</button>
+          <button class="btn-2" id="skills-btn">Skills</button>
+        </div>
+      </div>
+      <div class="portfolio visible" id="portfolio">
+        <div class="wrapper project-wrapper">
+          <a href="https://github.com/Aitmuhamet/ramonvue" target="_blank"
+            ><img src="assets/project-1_1_2_11zon.webp" alt="Project 1"
           /></a>
-          <a href="https://www.linkedin.com/in/Aitmukhamet"
-            ><img src="assets/linkedin_light.png" alt="linkedin logo"
+        </div>
+        <div class="wrapper project-wrapper">
+          <a href="https://github.com/Aitmuhamet/Art-Tashkent" target="_blank"
+            ><img src="assets/project-2_1_1_11zon.webp" alt="Project 2"
           /></a>
-          <a href="mailto:xa210296@gmail.com"
-            ><img src="assets/email_light.png" alt="email logo"
+        </div>
+        <div class="wrapper project-wrapper">
+          <a href="https://github.com/Aitmuhamet/simple" target="_blank"
+            ><img src="assets/project-3_1_3_11zon.webp" alt="Project 3"
+          /></a>
+        </div>
+        <div class="wrapper project-wrapper">
+          <a href="https://github.com/Aitmuhamet/roomtibet" target="_blank"
+            ><img src="assets/project-4_1_4_11zon.webp" alt="Project 4"
           /></a>
         </div>
       </div>
-    </section>
-    <section class="experience">
-      <h2><b>12+</b><br />Months<br />Frontend</h2>
-      <h2><b>4</b><br />Years<br />B.Sc.</h2>
-      <h2><b>15+</b><br />Academic<br />Projects</h2>
-    </section>
-    <section class="cta">
-      <a href="assets/my-cv.pdf" download>
-        <button class="btn download-btn">Download CV</button>
-      </a>
-      <a href="https://t.me/Aitmukhamet96"
-        ><button class="btn contact-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Contact Me
-        </button>
-      </a>
-    </section>
-    <section class="portfolio-skills">
-      <div class="btn-bg">
-        <button class="btn-2 active-btn" id="portfolio-btn">Portfolio</button>
-        <button class="btn-2" id="skills-btn">Skills</button>
+      <div class="skills" id="skills">
+        <div class="wrapper">
+          <h3>Frontend</h3>
+          <article class="frontend-skills">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>SCSS</p>
+            <p>PUG</p>
+            <p>Bootstrap</p>
+            <p>JavaScript</p>
+            <p>TypeScript</p>
+            <p>Vue.js</p>
+          </article>
+        </div>
+        <div class="wrapper">
+          <h3>Backend</h3>
+          <article class="backend-skills">
+            <p>Node.js</p>
+            <p>Express.js</p>
+            <p>APIs</p>
+            <p>Database CRUD</p>
+            <p>Git</p>
+            <p>Web Servers</p>
+            <p>PHP</p>
+          </article>
+        </div>
+      </div>
+      <div class="cta second-screen__cta">
+        <a href="#intro">
+          <button class="btn download-btn">Contacts</button>
+        </a>
+        <a href="https://github.com/Aitmuhamet"
+          ><button class="btn contact-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            More
+          </button>
+        </a>
       </div>
     </section>
-    <section class="portfolio" id="portfolio">
-      <div class="wrapper project-wrapper">
-        <a href="https://github.com/Aitmuhamet/ramonvue" target="_blank"
-          ><img src="assets/project-1_1_2_11zon.webp" alt="Project 1"
-        /></a>
-      </div>
-      <div class="wrapper project-wrapper">
-        <a href="https://github.com/Aitmuhamet/Art-Tashkent" target="_blank"
-          ><img src="assets/project-2_1_1_11zon.webp" alt="Project 2"
-        /></a>
-      </div>
-      <div class="wrapper project-wrapper">
-        <a href="https://github.com/Aitmuhamet/simple" target="_blank"
-          ><img src="assets/project-3_1_3_11zon.webp" alt="Project 3"
-        /></a>
-      </div>
-      <div class="wrapper project-wrapper">
-        <a href="https://github.com/Aitmuhamet/roomtibet" target="_blank"
-          ><img src="assets/project-4_1_4_11zon.webp" alt="Project 4"
-        /></a>
-      </div>
-    </section>
-    <section class="skills" id="skills">
-      <div class="wrapper">
-        <h3>Frontend</h3>
-        <article class="frontend-skills">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>SCSS</p>
-          <p>PUG</p>
-          <p>Bootstrap</p>
-          <p>JavaScript</p>
-          <p>TypeScript</p>
-          <p>Vue.js</p>
-        </article>
-      </div>
-      <div class="wrapper">
-        <h3>Backend</h3>
-        <article class="backend-skills">
-          <p>Node.js</p>
-          <p>Express.js</p>
-          <p>APIs</p>
-          <p>Database CRUD</p>
-          <p>Git</p>
-          <p>Web Servers</p>
-          <p>PHP</p>
-        </article>
-      </div>
-    </section>
-    <footer>
-      <p><b>2024</b></p>
-    </footer>
   </body>
 </html>

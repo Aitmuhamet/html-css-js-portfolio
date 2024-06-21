@@ -26,6 +26,10 @@
   --btn-bg-light: var(--dark-btn-bg-light);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: var(--primary-font, "Arial, sans-serif");
@@ -36,6 +40,10 @@ body {
 .theme-btn {
   position: relative;
   left: 8.5rem;
+  transition: transform .1s ease-in-out;
+}
+.theme-btn:hover {
+  transform: scale(.9);
 }
 
 h1,
@@ -84,6 +92,14 @@ article,
 .portfolio,
 .skills {
   gap: 1rem;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-pic {
@@ -149,9 +165,9 @@ footer,
 }
 
 .experience {
-  margin: auto;
   margin-top: 1.4rem;
   max-width: 20rem;
+  gap: 2rem;
 }
 
 .experience b {
@@ -165,7 +181,8 @@ footer,
 }
 
 .cta {
-  margin-top: 1.2rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 
 .cta,
@@ -239,10 +256,8 @@ footer,
 }
 
 .contact-btn:hover {
-  box-shadow: 0 0 5px var(--btn-bg-color), 
-              0 0 25px var(--btn-bg-color), 
-              0 0 50px var(--btn-bg-color),
-              0 0 80px var(--btn-bg-color);
+  box-shadow: 0 0 5px var(--btn-bg-color), 0 0 25px var(--btn-bg-color),
+    0 0 50px var(--btn-bg-color), 0 0 80px var(--btn-bg-color);
 }
 
 .contact-btn span {
@@ -262,8 +277,9 @@ footer,
   0% {
     left: -100%;
   }
-  50%, 100% {
-    left: 100%
+  50%,
+  100% {
+    left: 100%;
   }
 }
 .contact-btn span:nth-child(2) {
@@ -273,15 +289,16 @@ footer,
   height: 100%;
   background: linear-gradient(180deg, transparent, var(--btn-bg-color));
   animation: btn2 1s linear infinite;
-  animation-delay: .25s;
+  animation-delay: 0.25s;
 }
 
 @keyframes btn2 {
   0% {
     top: -100%;
   }
-  50%, 100% {
-    top: 100%
+  50%,
+  100% {
+    top: 100%;
   }
 }
 .contact-btn span:nth-child(3) {
@@ -291,15 +308,16 @@ footer,
   height: 3px;
   background: linear-gradient(270deg, transparent, var(--btn-bg-color));
   animation: btn3 1s linear infinite;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 @keyframes btn3 {
   0% {
     right: -100%;
   }
-  50%, 100% {
-    right: 100%
+  50%,
+  100% {
+    right: 100%;
   }
 }
 .contact-btn span:nth-child(4) {
@@ -309,18 +327,18 @@ footer,
   height: 100%;
   background: linear-gradient(360deg, transparent, var(--btn-bg-color));
   animation: btn4 1s linear infinite;
-  animation-delay: .75s;
+  animation-delay: 0.75s;
 }
 
 @keyframes btn4 {
   0% {
     bottom: -100%;
   }
-  50%, 100% {
-    bottom: 100%
+  50%,
+  100% {
+    bottom: 100%;
   }
 }
-
 
 .btn-2:hover,
 .active-btn {
@@ -334,6 +352,7 @@ footer,
 
 .btn {
   width: 9rem;
+  text-transform: uppercase;
 }
 
 .btn-2 {
@@ -366,13 +385,24 @@ article p,
   margin-top: 2rem;
 }
 
+.portfolio,
+.skills {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
 .skills {
   display: none;
+}
+.visible {
+  opacity: 1;
+}
+.hidden {
+  opacity: 0;
 }
 
 .wrapper img {
   border-radius: 1rem;
-  transition: box-shadow .2s;
+  transition: box-shadow 0.2s;
 }
 .wrapper img:hover {
   box-shadow: 5px 5px 15px var(--secondary-color);
@@ -391,7 +421,7 @@ article p {
   border-radius: 0.5rem;
   flex-grow: 20;
   padding: 1rem;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 article p:hover {
@@ -421,5 +451,9 @@ footer {
   .wrapper {
     width: calc(48%);
     flex: none;
+  }
+  .second-screen__cta {
+    margin-top: auto;
+    margin-bottom: 4rem;
   }
 }
