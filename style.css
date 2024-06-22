@@ -40,10 +40,10 @@ body {
 .theme-btn {
   position: relative;
   left: 8.5rem;
-  transition: transform .1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 }
 .theme-btn:hover {
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 h1,
@@ -388,7 +388,7 @@ article p,
 .portfolio,
 .skills {
   opacity: 0;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 .skills {
   display: none;
@@ -422,6 +422,13 @@ article p {
   flex-grow: 20;
   padding: 1rem;
   transition: transform 0.3s ease;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 article p:hover {
