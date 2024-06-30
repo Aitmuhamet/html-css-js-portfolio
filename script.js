@@ -4,6 +4,41 @@ const portfolioBtn = document.getElementById("portfolio-btn");
 const skills = document.getElementById("skills");
 const skillsBtn = document.getElementById("skills-btn");
 
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  let currentSection = 0;
+  let isScrolling = false;
+
+  const handleScroll = (event) => {
+    if (isScrolling) return;
+    isScrolling = true;
+
+    const currentScroll = window.pageYOffset;
+    const nextSection = sections[currentSection + 1];
+    const prevSection = sections[currentSection - 1];
+    
+    console.log(currentScroll);
+
+    if (nextSection && currentScroll >= nextSection.offsetTop - window.innerHeight * .9999) {
+      currentSection++;
+    } else if (prevSection && currentScroll <= prevSection.offsetTop + window.innerHeight * .9999) {
+      currentSection--;
+    }
+
+    sections[currentSection].scrollIntoView({
+      behavior: "smooth"
+    });
+
+    setTimeout(() => {
+      isScrolling = false;
+    }, 1000); // Задержка, чтобы избежать слишком частого переключения
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("wheel", handleScroll);
+});
+
+
 portfolioBtn.addEventListener("click", (event) => {
   skills.style.display = "none";
   portfolio.style.display = "flex";
